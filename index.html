@@ -16,19 +16,44 @@
     <title>Document</title>
   </head>
   <body>
-    <header header>
-      <h1 header__logo></h1><img src="image/company-logo.png">
-      <div class="nav"> </div>
-      <ul>
-        <li><a href=""> </a></li>
-        <li><a href=""> </a></li>
-        <li><a href=""> </a></li>
-        <li><a href=""> </a></li>
-      </ul>
-      <div class="singin"> </div>
-      <div class="singin__link"> </div>
-      <div class="singin__button"></div>
-    </header>
-    <div class="content"></div>
+    <wrapper> 
+      <header class="heder__container"> 
+        <h1 class="header__logo"> <img src="images/company-logo.png" alt=""></h1>
+        <nav class="navigation__body navigation" id="menu"> 
+          <ul class="navigation__list"> 
+            <li class="navigation__item"> <a class="navigation__link" href="#"> Home</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#"> About</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#"> Contact</a></li>
+            <li class="navigation__item"> <a class="navigation__link" href="#"> Blog                            </a></li>
+          </ul>
+        </nav>
+        <div class="header__signin"> <a class="signin" href="#">Sign in</a>
+          <div class="header__button button"> <a href="#">Create account</a></div>
+        </div><a class="hamburger" id="menu"><span></span></a>
+      </header>
+      <div class="content">
+        <div class="help__container"> 
+          <div class="help__content content"> 
+            <h2 class="help__title"> Looking for a job?</h2>
+            <h2 class="title-green">we will help you</h2>
+            <p class="help__text">Check out our offers</p>
+            <form class="text__form"><img src="images/lupa.png" alt="">
+              <input placeholder="Type in your job search">
+              <div class="separator"> </div>
+              <div class="location">location:</div>
+              <div class="dropdowp"> 
+                <button class="mainmenubtn"></button>
+                <div class="dropdown-child"><a href="#"> Wroclaw</a></div>
+              </div>
+              <div class="form__button button">Search</div>
+            </form>
+          </div>
+          <ul class="social__list list"> 
+            <li class="social__items"> <a class="social__icons" href=""> </a></li>
+          </ul>
+          <div class="help__image"> </div>
+        </div>
+      </div>
+    </wrapper>
   </body>
 </html>

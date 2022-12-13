@@ -1,0 +1,32 @@
+body {
+    color: #4b4b4b;
+    text-align: left;
+    letter-spacing: 0.64px;
+    font: 400 get-vw($fs-md)/#{ 52.8px} $main-font;
+}
+
+h1,
+h2,
+h3 {
+	font-family: $main-font; 
+}
+
+h2 {
+    font: 700 get-vw($fs-xxlg)/#{142.37px};
+}
+
+h3 {
+    font: get-vw($fs-xlg+4)/#{46.8px};
+    color: $color3;
+}
+
+a {
+    font-size: $fs-sm;
+    color: $color1;
+}
+
+p {
+    color: $color1;
+    letter-spacing: 0.64px;
+    font: 400 get-vw($fs-md)/#{52.8px};
+}
