@@ -1,20 +1,42 @@
-.help__container 
-    .help__content.content 
-        h2.help__title  Looking for a job?
-        h2.title-green we will help you
-        p.help__text Check out our offers
-        form.text__form
-            img(src="images/lupa.png", alt="")
-            input(placeholder="Type in your job search") 
-            .separator 
-            .location location:
-            .dropdowp 
-                button.mainmenubtn
-                .dropdown-child
-                    a(href="#")  Wroclaw
-            .form__button.button Search
-    ul.social__list.list 
-            li.social__items 
-                a.social__icons(href="") 
-    .help__image 
+.help__wrapper
+    .help__container 
+        .help__content.content 
+            h2.help__title  Looking for a job?
+            span.title-green we will help you
+            p.help__text Check out our offers
+            form.text__form
+                .form__img
+                    img(src="images/lupa.png", alt="")
+                .form__input    
+                    input(placeholder="Type in your job search").search
+                .separator 
+                .location location:
+                .dropdown
+                    ul.dropdown__list 
+                        li.dropdown__item
+                            a(href="#") Wrotslav 
+                        li  
+                            a.dropdown__link(href="#") Krakov    
+                .form__button.button Search
+            .socialnetwork
+                p Fallow Us
+                ul.social__list.list 
+                    li.social__items 
+                        a(href="") 
+                            img(src="images/inst.png", alt="")
+                    li.social__items 
+                        a(href="")
+                            img(src="images/twitter.png", alt="")              
+                    li.social__items 
+                        a(href="")
+                            img(src="images/facebook.png", alt="") 
+        .help__images            
+            .help__border.border  
+            .help__image1
+                img(src="images/fingers.png", alt="")           
+            .help__image2
+                img(src="images/hend.png", alt="")
+            
+
+         
         

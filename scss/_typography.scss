@@ -1,8 +1,9 @@
 body {
-    color: #4b4b4b;
-    text-align: left;
+    color: $color1;
     letter-spacing: 0.64px;
-    font: 400 get-vw($fs-md)/#{ 52.8px} $main-font;
+    font-size: $fs-md;
+    font-weight: 400;
+    line-height: 53px  
 }
 
 h1,
@@ -12,12 +13,25 @@ h3 {
 }
 
 h2 {
-    font: 700 get-vw($fs-xxlg)/#{142.37px};
-}
+    font-size: $fs-xxxlg;
+    font-weight: 700;
+    }
 
 h3 {
-    font: get-vw($fs-xlg+4)/#{46.8px};
     color: $color3;
+    font-size: #{$fs-xlg+4};
+    line-height: 41px;
+}
+
+h4{
+    font-size: $fs-xlg;
+    color: $color1;
+    line-height: 41px;
+}
+
+h5{
+    font-size:#{$fs-xlg+36};
+    color: $color2;
 }
 
 a {
@@ -28,5 +42,12 @@ a {
 p {
     color: $color1;
     letter-spacing: 0.64px;
-    font: 400 get-vw($fs-md)/#{52.8px};
+    font-size: $fs-md ;
+    line-height: 53px;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: #{$fs-xlg+76};
+    }
 }

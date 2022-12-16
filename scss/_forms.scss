@@ -1,0 +1,138 @@
+
+.text__form {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: $bgc4;
+    height: 170px;
+    padding: 55px 75px;
+    z-index: 1;
+    margin-top: 60px;
+    box-shadow: 42px 39px 73px rgba(44, 55, 35, 0.04);
+    border-radius: 24px;
+    background-color: $bgc4;
+}
+
+.search {
+    padding-left: 75px;
+    padding-right: 105px;
+    border: none;
+    font-size: $fs-md;
+}
+
+.separator {
+    width: 3px;
+    height: 30px;
+    background-color: $bgc1;
+}
+
+.location {
+    margin-left: 65px;
+    color: $color5;
+    font-size: $fs-md;
+}
+
+.dropdown__list {
+    padding-top: 55%;
+    padding-left: 30%;
+}
+
+.dropdown__link {
+     opacity: 0;
+      &:hover { 
+        opacity: 1;
+ }
+
+}
+
+.form__button {
+    margin-left: 95px;
+    padding: 40px 70px;
+}
+
+// =========form-home
+
+.form__container {
+    padding: 335px 15px 0 15px;
+}
+
+.form-home {
+    background-color: $bgc2;
+    border-radius: 59px;
+}
+
+.home-form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 135px 200px;
+
+}
+
+.form__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__content-title {
+    color: $color4;
+    line-height: 117px;
+    margin-bottom: 55px;
+}
+
+.form__content-text {
+    color: $color8;
+    font-size: $fs-md;
+    line-height: 61px;
+    letter-spacing: 0.6px;
+}
+.input__form {
+    display: flex;
+    align-items: center;
+}
+
+.form-home__input {
+padding: 65px 75px;
+width: 760px;
+border-radius: 28px;
+background-color: $bgc3;
+border: none;
+}
+
+.form-home__button {
+    background-color: $bgc1;
+    padding: 35px 90px;
+    margin-left: 75px;
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: $color8;
+        color: $color1;
+    }
+}
+
+// ======
+@media (max-width: 768px) {
+    .text__form {
+        padding: 35px 55px;
+    }
+    .search {
+        padding-left: 25px;
+        padding-right: 0;
+        font-size: $fs-md;
+    }
+       
+    .location {
+        margin-left: 25px;
+        font-size: $fs-md;
+    }
+    
+    .dropbtn {
+        margin-left: 45px;
+        font-size: $fs-md;
+    }
+
+    .form__button {
+        margin-left: 100px;
+        padding: 20px 50px;
+    }
+}
