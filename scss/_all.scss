@@ -100,7 +100,6 @@ main {
 // ================= help
 
 .help__container {
-    position: relative;
     display: flex;
     padding: 240px 15px 0 15px;
     background-color: $bgc3;
@@ -114,6 +113,7 @@ main {
 .help__title {
 margin-bottom: 100px;
 }
+
 .title-green {
     color: $color2;
     font-size: $fs-xxxlg;
@@ -177,7 +177,8 @@ margin-bottom: 100px;
 .category__wrapper,
 .job__wrapper,
 .services__wrapper,
-.form__wrapper  {
+.form__wrapper,
+.wrapper__find  {
     width: 3077px;
     background-color: $bgc4;
     margin: 0 auto;
@@ -265,7 +266,20 @@ margin-bottom: 100px;
 .right__button {
     background-image: url("../images/right.png");
 }
+// =====================
+.find__container {
+    padding: 200px 15px 0 15px;
+}
 
+.find__title {
+    text-align: center;
+    justify-content: center;
+}
+
+.title__find {
+    height: 1210px;
+    background-image: url("../images/find.png");
+}
 // ==============job
 
 .job__container {
@@ -311,6 +325,9 @@ margin-bottom: 100px;
 }
 
 .items-title-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 19px;
     border: 2px solid $color6;
     padding: 55px 45px;
@@ -384,6 +401,7 @@ text-align: center;
 // ==================media=====
 @media (max-width: 768px) {
      .hamburger {
+        z-index: 100;
         position: relative;
         flex: 0 0 40px;
         height: 18px;
@@ -438,12 +456,14 @@ text-align: center;
     }
 // ====help
     .help__container {
-        padding: 340px 15px 0 15px;
-       
+        padding: 340px 15px 0 15px;      
     }
+
     .help__content {
-        width: 100%;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     .help__images{
@@ -492,6 +512,9 @@ text-align: center;
     }
     .job__items {
         width: 40%;
+    }
+    .services__list {
+        flex-wrap: wrap;
     }
 }
 

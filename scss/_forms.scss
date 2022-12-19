@@ -1,10 +1,12 @@
 
 .text__form {
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: $bgc4;
     height: 170px;
+    width: 1450px;
     padding: 55px 75px;
     z-index: 1;
     margin-top: 60px;
@@ -46,7 +48,7 @@
 }
 
 .form__button {
-    margin-left: 95px;
+    margin-left: 160px;
     padding: 40px 70px;
 }
 
@@ -134,5 +136,15 @@ border: none;
     .form__button {
         margin-left: 100px;
         padding: 20px 50px;
+    }
+    .home-form {
+        flex-direction: column;
+        padding: 50px 50px;
+    }
+    .input__form {
+        flex-direction: column;
+    }
+    .form-home__input {
+        margin: 50px 0;
     }
 }
