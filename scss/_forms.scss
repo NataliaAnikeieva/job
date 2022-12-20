@@ -61,6 +61,7 @@
 .form-home {
     background-color: $bgc2;
     border-radius: 59px;
+    display: inline-flex;
 }
 
 .home-form{
@@ -87,6 +88,7 @@
     font-size: $fs-md;
     line-height: 61px;
     letter-spacing: 0.6px;
+    width: 784px;
 }
 .input__form {
     display: flex;
@@ -99,6 +101,7 @@ width: 760px;
 border-radius: 28px;
 background-color: $bgc3;
 border: none;
+background-color: $bgc4;
 }
 
 .form-home__button {
@@ -112,10 +115,21 @@ border: none;
     }
 }
 
+// ====
+.footer__input {
+    padding: 30px 100px;
+    border-color: $color7;
+    background-image: url(../images/email.png);
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+}
+
 // ======
 @media (max-width: 768px) {
     .text__form {
-        padding: 35px 55px;
+        padding: 35px 25px;
+        width: 1150px;
+        
     }
     .search {
         padding-left: 25px;
@@ -137,14 +151,26 @@ border: none;
         margin-left: 100px;
         padding: 20px 50px;
     }
-    .home-form {
-        flex-direction: column;
-        padding: 50px 50px;
+
+}
+
+@media (max-width: 576px) {
+    .form__container {
+        padding: 135px 15px 0 15px;
     }
+    
+    .home-form{
+        padding: 135px 150px;
+    } 
     .input__form {
         flex-direction: column;
     }
     .form-home__input {
         margin: 50px 0;
     }
+    .home-form {
+        flex-direction: column;
+        padding: 50px 50px;
+    }
+
 }
