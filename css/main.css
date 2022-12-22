@@ -261,19 +261,6 @@ main {
   margin-bottom: 130px;
 }
 
-.round__button {
-  width: 20%;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  background-color: #92d35e;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.round__button:hover {
-  background-color: #4b4b4b;
-}
-
 .job__container {
   padding: 190px 0 0 15px;
 }
@@ -1532,6 +1519,19 @@ button {
 .form-home__button:hover {
   background-color: #dff4cf;
   color: #4b4b4b;
+}
+
+.round__button {
+  width: 20%;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: #92d35e;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.round__button:hover {
+  background-color: #4b4b4b;
 }
 
 @media (max-width: 768px) {

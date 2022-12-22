@@ -170,6 +170,19 @@ background-color: $bgc4;
     }
 }
 
+
+.round__button {
+    width: 20%;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: $bgc2;
+    transition: all 0.5s ease;
+        &:hover {
+            background-color: $bgc1;
+        }
+}
+
 // ======
 @media (max-width: 768px) {
     .text__form {
