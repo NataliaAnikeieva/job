@@ -201,28 +201,29 @@ main {
   margin-left: 80px;
 }
 
-.category__arrow,
-.job__arrow {
-  display: inline-block;
-  margin-left: 40px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.title__category,
+.title__job {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
-.category__arrow:hover,
-.job__arrow:hover {
-  opacity: 0.5;
-}
-
-.slider__category {
+.title__category a,
+.title__job a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-left: 110px;
+}
+.title__category img,
+.title__job img {
+  margin-left: 45px;
+}
+
+.slider__category {
+  position: relative;
 }
 
 .cards__content {
@@ -1485,14 +1486,20 @@ button {
 .left__button {
   background-repeat: no-repeat;
   background-position: center;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .left__button {
   background-image: url("../images/left.png");
+  left: 0;
 }
 
 .right__button {
   background-image: url("../images/right.png");
+  right: 0;
 }
 
 .job__items-button {
@@ -1529,9 +1536,15 @@ button {
   background-color: #92d35e;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 .round__button:hover {
   background-color: #4b4b4b;
+}
+.round__button span {
+  width: 120px;
+  text-indent: -99999px;
+  display: block;
 }
 
 @media (max-width: 768px) {

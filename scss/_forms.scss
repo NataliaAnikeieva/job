@@ -137,13 +137,18 @@ background-color: $bgc4;
 .left__button {
     background-repeat: no-repeat;
     background-position: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .left__button {
     background-image: url("../images/left.png");
+    left: 0;
 }
 
 .right__button {
     background-image: url("../images/right.png");
+    right: 0;
 }
 
 .job__items-button {
@@ -178,9 +183,15 @@ background-color: $bgc4;
     border-radius: 50%;
     background-color: $bgc2;
     transition: all 0.5s ease;
+    cursor: pointer;
         &:hover {
             background-color: $bgc1;
         }
+    span {
+        width: 120px;
+        text-indent: -99999px;
+        display: block;
+    }
 }
 
 // ======

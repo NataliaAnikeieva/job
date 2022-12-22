@@ -1,0 +1,87 @@
+// usage: @include transition(opacity visibility);
+@mixin transition(
+	$properties: all,
+	$duration: .5s,
+	$method: ease,
+	$delay: 0s) {
+		$value: ();
+		@each $property in $properties {
+			@if length($value) > 0 {
+				$value: append($value, unquote(",") #{$property} $duration $method $delay);
+			}
+			@else {
+				$value: append($value, #{$property} $duration $method $delay);
+			}
+		}
+		transition: $value;
+}
+// usage: @include size(100px 100px);
+@mixin size($value) {
+  $width: nth($value, 1);
+  $height: $width;
+
+  @if length($value) > 1 {
+    $height: nth($value, 2);
+  }
+
+  @if is-size($height) {
+    height: $height;
+  } @else {
+    @warn "`#{$height}` is not a valid length for the `$height` parameter in the `size` mixin.";
+  }
+
+  @if is-size($width) {
+    width: $width;
+  } @else {
+    @warn "`#{$width}` is not a valid length for the `$width` parameter in the `size` mixin.";
+  }
+}
+//usage: @include position(absolute, 0 null null 0);
+@mixin position($position,// usage: @include transition(opacity visibility);
+@mixin transition(
+	$properties: all,
+	$duration: .5s,
+	$method: ease,
+	$delay: 0s) {
+		$value: ();
+		@each $property in $properties {
+			@if length($value) > 0 {
+				$value: append($value, unquote(",") #{$property} $duration $method $delay);
+			}
+			@else {
+				$value: append($value, #{$property} $duration $method $delay);
+			}
+		}
+		transition: $value;
+}
+  }
+  @if($right!=null){
+    right: $right;
+  }
+  @if($bottom!=null){
+    bottom: $bottom;
+  }
+  @if ($left!=null){
+    left: $left;
+  }
+}
+// usage: @include flex(wrap, null, center, center);
+@mixin flex($wrap: unset, $direction: normal, $justify: normal, $align: normal) {
+	display: flex;
+	@include flex-wrap($wrap);
+  @include flex-direction($direction);
+  @include flex-justify($justify);
+  @include flex-align($align);
+}
+@mixin flex-direction($direction: normal) {
+ flex-direction: $direction;
+}
+@mixin flex-align($align: normal) {
+ align-items: $align;
+}
+@mixin flex-justify($justify: normal) {
+	justify-content: $justify;
+}
+@mixin flex-wrap($wrap: normal) {
+	flex-wrap: $wrap;
+}
