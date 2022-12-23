@@ -1,9 +1,7 @@
 body {
     color: $color1;
-    letter-spacing: 0.64px;
-    font-size: $fs-md;
-    font-weight: 400;
-    line-height: 53px  
+    letter-spacing: 0.64px; 
+    font: 400 $fs-md/53px "Lato";
 }
 
 h1,

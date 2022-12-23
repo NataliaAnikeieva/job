@@ -63,6 +63,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: -112px;
 }
 .navigation__link {
   letter-spacing: 0.96px;
@@ -97,9 +98,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 240px 15px 0 15px;
+  padding: 240px 15px 55px 15px;
   background-color: #f3f7ed;
-  height: 1250px;
 }
 
 .help__content {
@@ -134,11 +134,15 @@ main {
   margin-top: 150px;
 }
 
+.socialnetwork p {
+  margin-right: 55px;
+}
+
 .social__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 55px;
+  margin-left: -22px;
 }
 
 .social__items {
@@ -235,7 +239,6 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-top: 30%;
 }
 
 .cards__list {
@@ -259,7 +262,7 @@ main {
 }
 
 .cards__img {
-  margin-bottom: 130px;
+  margin: 100px 100px;
 }
 
 .job__container {
@@ -485,6 +488,9 @@ main {
 .co__items {
   padding-top: 40px;
 }
+.co__items:first-child {
+  padding-bottom: 40px;
+}
 
 .co__link {
   color: #343434;
@@ -502,6 +508,7 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 465px;
+  margin-top: 85px;
 }
 
 .newsletter__text {
@@ -1273,9 +1280,7 @@ ul {
 body {
   color: #4b4b4b;
   letter-spacing: 0.64px;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 53px;
+  font: 400 0.6037735849 "Lato";
 }
 
 h1,

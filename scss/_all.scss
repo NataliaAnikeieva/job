@@ -51,6 +51,7 @@ main {
 .navigation {
 &__list {
     display: flex; 
+    margin-left: -112px;
 } 
 
 &__link {
@@ -84,9 +85,8 @@ main {
 
 .help__container {
     display: flex;
-    padding: 240px 15px 0 15px;
+    padding: 240px 15px 55px 15px;
     background-color: $bgc3;
-    height: 1250px;
 }
 
 .help__content {
@@ -119,9 +119,12 @@ main {
     margin-top: 150px;
 }
 
+.socialnetwork p {
+    margin-right: 55px;
+}
 .social__list {
     display: flex;
-    margin-left: 55px;
+    margin-left: -22px;
 }
 
 .social__items {
@@ -203,7 +206,6 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 30%;
 }
 
 .cards__list {
@@ -225,7 +227,7 @@ main {
 }
 
 .cards__img {
-    margin-bottom: 130px;
+    margin: 100px 100px;
 }
 
 // ==============job
@@ -410,7 +412,11 @@ main {
 }
 .co__items {
     padding-top: 40px;
+    &:first-child {
+        padding-bottom: 40px;
+    }
 }
+
 
 .co__link {
     color: $color3;
@@ -423,6 +429,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 465px;
+    margin-top: 85px;
 }
 
 .newsletter__text {
