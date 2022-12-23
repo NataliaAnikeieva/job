@@ -41,7 +41,6 @@ main {
 }
 
 .header__logo {
-    flex: 1 1 auto;
     &:hover {
         opacity: 0.8;
         transition: all 0.5s ease;
@@ -70,8 +69,6 @@ main {
 
 .header__signin {
     display: flex;
-    flex: 0 0 490px;
-    margin-left: 10.7rem;
     align-items: center;
 }
 
@@ -145,13 +142,22 @@ main {
 
 .border {
     position: relative;
-    border: 2px solid $color2;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 180px;
+        left: -140px;
+        border: 2px solid $color2;
+        border-radius: 155px;
+        width: calc(100% - 115px);
+        height: calc(100% - 380px);
+        z-index: -1;
+    }
 }
 
 .help__border {   
     width: 1200px;
-    height: 1000px;
-    border-radius: 155px;   
+    height: 1000px;      
     margin-top: -86%;
     margin-left: -2%;
 }
@@ -205,7 +211,13 @@ main {
 .cards__content {
     display: flex;
     flex-direction: column;
-    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 50px;
+    border: 2px solid $color6;
+    background-color: $bgc4;
 }
 
 .cards__list {
@@ -215,10 +227,7 @@ main {
 
 .cards__items {
     width: 350px;
-    height: 550px;
-    border-radius: 50px;
-    border: 2px solid $color6;
-    background-color: $bgc4;
+    height: 550px;   
     margin-left: 85px;
 }
 
@@ -227,7 +236,7 @@ main {
 }
 
 .cards__img {
-    margin: 100px 100px;
+    margin: 0 0 100px;
 }
 
 // ==============job
@@ -263,15 +272,19 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: -80px 0 0 -80px;
 }
 
 .job__items {
-    width: 48%;
+    width: 50%;    
+    position: relative;
+    padding: 80px 0 0 80px;
+}
+.job-holder {
+    position: relative;
     border-radius: 48px;
     border: 2px solid $color6;
     padding: 65px 55px;
-    position: relative;
-    margin-bottom: 135px;
 }
 
 .job__items-title {

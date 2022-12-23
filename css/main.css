@@ -48,11 +48,6 @@ main {
   background-color: #f3f7ed;
 }
 
-.header__logo {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
 .header__logo:hover {
   opacity: 0.8;
   -webkit-transition: all 0.5s ease;
@@ -81,10 +76,6 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 490px;
-          flex: 0 0 490px;
-  margin-left: 10.7rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -164,13 +155,22 @@ main {
 
 .border {
   position: relative;
+}
+.border:before {
+  content: "";
+  position: absolute;
+  top: 180px;
+  left: -140px;
   border: 2px solid #92d35e;
+  border-radius: 155px;
+  width: calc(100% - 115px);
+  height: calc(100% - 380px);
+  z-index: -1;
 }
 
 .help__border {
   width: 1200px;
   height: 1000px;
-  border-radius: 155px;
   margin-top: -86%;
   margin-left: -2%;
 }
@@ -238,7 +238,17 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-radius: 50px;
+  border: 2px solid #e8e8e8;
+  background-color: #fff;
 }
 
 .cards__list {
@@ -251,9 +261,6 @@ main {
 .cards__items {
   width: 350px;
   height: 550px;
-  border-radius: 50px;
-  border: 2px solid #e8e8e8;
-  background-color: #fff;
   margin-left: 85px;
 }
 
@@ -262,7 +269,7 @@ main {
 }
 
 .cards__img {
-  margin: 100px 100px;
+  margin: 0 0 100px;
 }
 
 .job__container {
@@ -303,15 +310,20 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: -80px 0 0 -80px;
 }
 
 .job__items {
-  width: 48%;
+  width: 50%;
+  position: relative;
+  padding: 80px 0 0 80px;
+}
+
+.job-holder {
+  position: relative;
   border-radius: 48px;
   border: 2px solid #e8e8e8;
   padding: 65px 55px;
-  position: relative;
-  margin-bottom: 135px;
 }
 
 .job__items-title {
@@ -1340,16 +1352,15 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
   height: 170px;
   width: 1250px;
-  padding: 55px 75px;
   z-index: 3;
   margin-top: 60px;
   -webkit-box-shadow: 42px 39px 73px rgba(44, 55, 35, 0.04);
@@ -1480,11 +1491,20 @@ button {
   border-radius: 18px;
   background-color: #92d35e;
   color: #fff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: color 0.5s ease 0s , background 0.5s ease 0s;
+  transition: color 0.5s ease 0s , background 0.5s ease 0s;
 }
 .button:hover {
   background-color: #4b4b4b;
+}
+
+.button_second {
+  background-color: #4b4b4b;
+  padding: 35px 90px;
+}
+.button_second:hover {
+  background-color: #dff4cf;
+  color: #4b4b4b;
 }
 
 .right__button,
@@ -1510,9 +1530,11 @@ button {
 .job__items-button {
   position: absolute;
   padding: 20px 45px;
-  margin-top: 40px;
-  margin-left: 200px;
   z-index: 99;
+  bottom: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .footer__button {
@@ -1522,29 +1544,14 @@ button {
 }
 
 .form-home__button {
-  background-color: #4b4b4b;
-  padding: 35px 90px;
   margin-left: 75px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.form-home__button:hover {
-  background-color: #dff4cf;
-  color: #4b4b4b;
 }
 
 .round__button {
-  width: 20%;
   height: 120px;
   width: 120px;
   border-radius: 50%;
-  background-color: #92d35e;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   cursor: pointer;
-}
-.round__button:hover {
-  background-color: #4b4b4b;
 }
 .round__button span {
   width: 120px;

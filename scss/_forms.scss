@@ -1,13 +1,11 @@
 
 .text__form {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(null, null, center, center);
     background-color: $bgc4;
     height: 170px;
     width: 1250px;
-    padding: 55px 75px;
+    //padding: 55px 75px;
     z-index: 3;
     margin-top: 60px;
     box-shadow: 42px 39px 73px rgba(44, 55, 35, 0.04);
@@ -127,10 +125,18 @@ background-color: $bgc4;
     border-radius: 18px;
     background-color: $bgc2;
     color: $color4;
-    transition: all 0.5s ease;
+    @include transition(color background);
      &:hover {
         background-color: $bgc1;
      }
+}
+.button_second {
+    background-color: $bgc1;
+    padding: 35px 90px;
+    &:hover {
+        background-color: $color8;
+        color: $color1;
+    }
 }
 
 .right__button,
@@ -154,9 +160,11 @@ background-color: $bgc4;
 .job__items-button {
     position: absolute;
     padding: 20px 45px;
-    margin-top: 40px;
-    margin-left: 200px;
     z-index: 99;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    
 }
 
 .footer__button {
@@ -165,28 +173,16 @@ background-color: $bgc4;
     margin-top: 85px;
 }
 .form-home__button {
-    background-color: $bgc1;
-    padding: 35px 90px;
     margin-left: 75px;
-    transition: all 0.5s ease;
-    &:hover {
-        background-color: $color8;
-        color: $color1;
-    }
 }
+//
 
 
 .round__button {
-    width: 20%;
     height: 120px;
     width: 120px;
     border-radius: 50%;
-    background-color: $bgc2;
-    transition: all 0.5s ease;
     cursor: pointer;
-        &:hover {
-            background-color: $bgc1;
-        }
     span {
         width: 120px;
         text-indent: -99999px;

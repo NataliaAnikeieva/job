@@ -12,7 +12,7 @@
     <!-- FAVICON-->
     <link href="favicon.ico" rel="shortcut icon">
     <!-- CSS LINKS-->
-    <link href="css./iconfonts.css" rel="stylesheet" media="screen">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" media="screen">
     <link href="css/widgets.css" rel="stylesheet" media="screen">
     <link href="css/main.css" rel="stylesheet" media="screen">
     <title>Document</title>
@@ -48,6 +48,10 @@
                 </div>
                 <div class="separator"> </div>
                 <div class="location">location:</div>
+                <select class="select" name="#">
+                  <option value="1">first</option>
+                  <option value="2">second</option>
+                </select>
                 <div class="dropdown">
                   <ul class="dropdown__list"> 
                     <li class="dropdown__item"><a href="#">Wrotslav </a></li>
@@ -66,8 +70,7 @@
               </div>
             </div>
             <div class="help__images">
-              <div class="hend__image"> <img src="images/hendsbig.png" alt=""></div>
-              <div class="help__border border"></div>
+              <div class="hend__image border"><img src="images/hendsbig.png" alt=""></div>
             </div>
           </div>
         </div>
@@ -77,12 +80,12 @@
               <h2>Search by <span class="title-green">category</span></h2><a href=""><span>All category</span><img src="images/arrow.png" alt=""></a>
             </div>
             <div class="slider__category slider"> 
-              <div class="left__button round__button"><span>left</span></div>
+              <div class="button left__button round__button"><span>left</span></div>
               <ul class="cards__list">
                 <li class="cards__items">
                   <div class="cards__content">
-                    <div class="cards__img">
-                      <p class="cards__text _icon-bulb"> Business</p>
+                    <div class="cards__img"><span class="fa-solid fa-viruses"></span>
+                      <p class="cards__text"> Business</p>
                       <p class="cards__text"> Development</p>
                     </div>
                   </div>
@@ -137,7 +140,7 @@
                   </div>
                 </li>
               </ul>
-              <div class="right__button round__button"> <span>right</span></div>
+              <div class="button right__button round__button"> <span>right</span></div>
             </div>
           </div>
         </div>
@@ -154,76 +157,84 @@
               <div class="job__cards"> 
                 <ul class="job__list"> 
                   <li class="job__items">
-                    <div class="job__items-title">
-                      <div class="items-title-img"><img src="images/gosmall.png" alt=""></div>
-                      <div class="items-title-content"> 
-                        <h4>Go! SM</h4>
-                        <p class="job__cards-text">
-                          It has survived not only fivecenturies, but also the leap into
-                          electronic typesetting, remaining
-                          essentially unchanged.
-                        </p>
+                    <div class="job-holder">
+                      <div class="job__items-title">
+                        <div class="items-title-img"><img src="images/gosmall.png" alt=""></div>
+                        <div class="items-title-content"> 
+                          <h4>Go! SM</h4>
+                          <p class="job__cards-text">
+                            It has survived not only fivecenturies, but also the leap into
+                            electronic typesetting, remaining
+                            essentially unchanged.
+                          </p>
+                        </div>
                       </div>
+                      <div class="job__items-subtitle">
+                        <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
+                        <p class="items-subtitle-nombers">Jobs:  3</p>
+                      </div>
+                      <div class="job__items-button button">See details</div>
                     </div>
-                    <div class="job__items-subtitle">
-                      <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
-                      <p class="items-subtitle-nombers">Jobs:  3</p>
-                    </div>
-                    <div class="job__items-button button">See details</div>
                   </li>
                   <li class="job__items">
-                    <div class="job__items-title">
-                      <div class="items-title-img"> <img src="images/rsmall.png" alt=""></div>
-                      <div class="items-title-content"> 
-                        <h4>Social Road</h4>
-                        <p class="job__cards-text">
-                           It has survived not only fivecenturies, but also the leap into
-                          electronic typesetting, remaining
-                          essentially unchanged.
-                        </p>
+                    <div class="job-holder">
+                      <div class="job__items-title">
+                        <div class="items-title-img"> <img src="images/rsmall.png" alt=""></div>
+                        <div class="items-title-content"> 
+                          <h4>Social Road</h4>
+                          <p class="job__cards-text">
+                             It has survived not only fivecenturies, but also the leap into
+                            electronic typesetting, remaining
+                            essentially unchanged.
+                          </p>
+                        </div>
                       </div>
+                      <div class="job__items-subtitle">
+                        <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
+                        <p class="items-subtitle-nombers">Jobs:  3</p>
+                      </div>
+                      <div class="job__items-button button">See details</div>
                     </div>
-                    <div class="job__items-subtitle">
-                      <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
-                      <p class="items-subtitle-nombers">Jobs:  3</p>
-                    </div>
-                    <div class="job__items-button button">See details</div>
                   </li>
                   <li class="job__items">
-                    <div class="job__items-title">
-                      <div class="items-title-img"> <img src="images/filesmall.png" alt=""></div>
-                      <div class="items-title-content"> 
-                        <h4>Create Paper</h4>
-                        <p class="job__cards-text">
-                           It has survived not only fivecenturies, but also the leap into
-                          electronic typesetting, remaining
-                          essentially unchanged.
-                        </p>
+                    <div class="job-holder">
+                      <div class="job__items-title">
+                        <div class="items-title-img"> <img src="images/filesmall.png" alt=""></div>
+                        <div class="items-title-content"> 
+                          <h4>Create Paper</h4>
+                          <p class="job__cards-text">
+                             It has survived not only fivecenturies, but also the leap into
+                            electronic typesetting, remaining
+                            essentially unchanged.
+                          </p>
+                        </div>
                       </div>
+                      <div class="job__items-subtitle">
+                        <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
+                        <p class="items-subtitle-nombers">Jobs:  3</p>
+                      </div>
+                      <div class="job__items-button button">See details</div>
                     </div>
-                    <div class="job__items-subtitle">
-                      <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
-                      <p class="items-subtitle-nombers">Jobs:  3</p>
-                    </div>
-                    <div class="job__items-button button">See details</div>
                   </li>
                   <li class="job__items">
-                    <div class="job__items-title">
-                      <div class="items-title-img"><img src="images/comentsmall.png" alt=""></div>
-                      <div class="items-title-content"> 
-                        <h4>Point Design</h4>
-                        <p class="job__cards-text">
-                           It has survived not only fivecenturies, but also the leap into
-                          electronic typesetting, remaining
-                          essentially unchanged.
-                        </p>
+                    <div class="job-holder">
+                      <div class="job__items-title">
+                        <div class="items-title-img"><img src="images/comentsmall.png" alt=""></div>
+                        <div class="items-title-content"> 
+                          <h4>Point Design</h4>
+                          <p class="job__cards-text">
+                             It has survived not only fivecenturies, but also the leap into
+                            electronic typesetting, remaining
+                            essentially unchanged.
+                          </p>
+                        </div>
                       </div>
+                      <div class="job__items-subtitle">
+                        <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
+                        <p class="items-subtitle-nombers">Jobs:  3</p>
+                      </div>
+                      <div class="job__items-button button">See details</div>
                     </div>
-                    <div class="job__items-subtitle">
-                      <p class="items-subtitle-text">location: <b>Stuttgart</b></p>
-                      <p class="items-subtitle-nombers">Jobs:  3</p>
-                    </div>
-                    <div class="job__items-button button">See details</div>
                   </li>
                 </ul>
               </div>
@@ -271,7 +282,7 @@
                 </div>
                 <div class="input__form">    
                   <input class="form-home__input" placeholder="Enter your email">
-                  <div class="form-home__button button">Send</div>
+                  <div class="form-home__button button button_second"> Send</div>
                 </div>
               </div>
             </form>

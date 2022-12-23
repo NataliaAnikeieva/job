@@ -12,6 +12,9 @@
                     input(placeholder="Type in your job search").search
                 .separator 
                 .location location:
+                select.select(name="#")
+                    option(value="1") first
+                    option(value="2") second
                 .dropdown
                     ul.dropdown__list 
                         li.dropdown__item
@@ -32,9 +35,9 @@
                         a(href="")
                             img(src="images/facebook.png", alt="") 
         .help__images
-            .hend__image  
+            .hend__image.border
                 img(src="images/hendsbig.png", alt="")           
-            .help__border.border
+            //- .help__border.border
             
 
          
