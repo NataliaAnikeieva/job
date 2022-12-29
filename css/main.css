@@ -48,6 +48,9 @@ main {
   background-color: #f3f7ed;
 }
 
+.header__logo {
+  z-index: 999;
+}
 .header__logo:hover {
   opacity: 0.8;
   -webkit-transition: all 0.5s ease;
@@ -65,7 +68,7 @@ main {
   padding-left: 112px;
 }
 .navigation__link:hover {
-  font-weight: 700;
+  text-decoration: underline;
 }
 
 .hamburger {
@@ -89,7 +92,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 240px 15px 55px 15px;
+  padding: 240px 15px 0 15px;
   background-color: #f3f7ed;
 }
 
@@ -160,19 +163,12 @@ main {
   content: "";
   position: absolute;
   top: 180px;
-  left: -140px;
+  left: -30px;
   border: 2px solid #92d35e;
   border-radius: 155px;
   width: calc(100% - 115px);
   height: calc(100% - 380px);
   z-index: -1;
-}
-
-.help__border {
-  width: 1200px;
-  height: 1000px;
-  margin-top: -86%;
-  margin-left: -2%;
 }
 
 .category__section,
@@ -269,7 +265,22 @@ main {
 }
 
 .cards__img {
-  margin: 0 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.cards__img:hover {
+  color: #92d35e;
+}
+
+.icons {
+  font-size: 80px;
+  margin-bottom: 130px;
 }
 
 .job__container {
@@ -279,16 +290,18 @@ main {
 .job__image {
   position: relative;
   z-index: 99;
-  margin-top: -200%;
 }
 
-.job__border {
-  position: relative;
-  width: 470px;
-  height: 1000px;
-  border-radius: 64px;
-  margin-top: -3%;
-  margin-left: -8%;
+.border-job::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -50px;
+  border: 2px solid #92d35e;
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .job__cards {
@@ -560,6 +573,8 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    top: 40%;
+    left: 2%;
   }
   .hamburger::before, .hamburger::after {
     content: "";
@@ -571,14 +586,13 @@ main {
     background-color: #4b4b4b;
   }
   .navigation {
-    z-index: 999;
+    z-index: 50;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 200px;
     background-color: #f3f7ed;
-    height: 410px;
   }
   .navigation__body {
     padding: 20px;
@@ -594,12 +608,14 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 0;
     position: absolute;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    left: 50%;
+    left: 10%;
+    top: 100%;
     opacity: 0;
+    background-color: #f3f7ed;
+    padding: 20px 80px;
     visibility: hidden;
     -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -617,8 +633,13 @@ main {
   .navigation__link {
     font-size: 36px;
   }
+  .header__logo {
+    position: fixed;
+  }
   .header__signin {
-    margin-left: 1.5rem;
+    margin-left: 90rem;
+    position: fixed;
+    z-index: 999;
   }
   .help__container {
     padding: 300px 15px;
@@ -689,12 +710,16 @@ main {
   }
   .job__cards {
     margin-left: -5%;
+    padding-bottom: 50px;
   }
   .job__items-button {
     margin-left: 300px;
   }
 }
 @media (max-width: 576px) {
+  .header__signin {
+    margin-left: 30rem;
+  }
   .job__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1388,16 +1413,9 @@ button {
   font-size: 32px;
 }
 
-.dropdown__list {
-  padding-top: 55%;
-  padding-left: 20%;
-}
-
-.dropdown__link {
-  opacity: 0;
-}
-.dropdown__link:hover {
-  opacity: 1;
+.select {
+  border: none;
+  margin-left: 65px;
 }
 
 .form__button {
@@ -1530,7 +1548,7 @@ button {
 .job__items-button {
   position: absolute;
   padding: 20px 45px;
-  z-index: 99;
+  z-index: 5;
   bottom: -30px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1583,6 +1601,9 @@ button {
   }
   .header__button {
     padding: 20px 40px;
+  }
+  .job__items-button {
+    left: 10%;
   }
 }
 @media (max-width: 576px) {

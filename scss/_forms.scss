@@ -32,17 +32,9 @@
     font-size: $fs-md;
 }
 
-.dropdown__list {
-    padding-top: 55%;
-    padding-left: 20%;
-}
-
-.dropdown__link {
-     opacity: 0;
-      &:hover { 
-        opacity: 1;
- }
-
+.select {
+    border: none;
+    margin-left: 65px;
 }
 
 .form__button {
@@ -160,7 +152,7 @@ background-color: $bgc4;
 .job__items-button {
     position: absolute;
     padding: 20px 45px;
-    z-index: 99;
+    z-index: 5;
     bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
@@ -219,6 +211,10 @@ background-color: $bgc4;
     }
     .header__button {
         padding: 20px 40px;
+    }
+    .job__items-button {
+        left: 10%;
+        
     }
 }
 

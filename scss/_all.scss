@@ -41,6 +41,7 @@ main {
 }
 
 .header__logo {
+    z-index: 999;
     &:hover {
         opacity: 0.8;
         transition: all 0.5s ease;
@@ -57,7 +58,7 @@ main {
     letter-spacing: 0.96px;
     padding-left: 112px;
     &:hover {
-        font-weight: 700;
+        text-decoration: underline;
     }
 }
 }
@@ -82,7 +83,7 @@ main {
 
 .help__container {
     display: flex;
-    padding: 240px 15px 55px 15px;
+    padding: 240px 15px 0 15px;
     background-color: $bgc3;
 }
 
@@ -146,20 +147,13 @@ main {
         content: '';
         position: absolute;
         top: 180px;
-        left: -140px;
+        left: -30px;
         border: 2px solid $color2;
         border-radius: 155px;
         width: calc(100% - 115px);
         height: calc(100% - 380px);
         z-index: -1;
     }
-}
-
-.help__border {   
-    width: 1200px;
-    height: 1000px;      
-    margin-top: -86%;
-    margin-left: -2%;
 }
 
 // =======category
@@ -236,9 +230,19 @@ main {
 }
 
 .cards__img {
-    margin: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &:hover {
+        color: $color2;
+    }
 }
 
+.icons {
+    font-size: #{$fs-xxlg+36};
+    margin-bottom: 130px ;
+
+}
 // ==============job
 
 .job__container {
@@ -248,16 +252,18 @@ main {
 .job__image {
     position: relative;
     z-index: 99;
-    margin-top: -200%;
 }
 
-.job__border {
-    position: relative;
-    width: 470px;
-    height: 1000px;
-    border-radius: 64px;
-    margin-top: -3%;
-    margin-left: -8%;
+.border-job::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: -50px;
+    border: 2px solid #92d35e;
+    border-radius: 100px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .job__cards {
@@ -430,7 +436,6 @@ main {
     }
 }
 
-
 .co__link {
     color: $color3;
     &:hover {
@@ -472,6 +477,8 @@ main {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        top: 40%;
+        left: 2%;
         &::before,
         &::after {
             content: "";
@@ -484,14 +491,13 @@ main {
        }
     }
     .navigation {
-        z-index: 999;
+        z-index: 50;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 200px;
         background-color: $bgc3;
-        height: 410px;
         &__body {
             padding: 20px;
         }
@@ -499,11 +505,13 @@ main {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin-top: 0;
             position: absolute;
             transform: translateX(-50%);
-            left: 50%;
+            left: 10%;
+            top: 100%;
             opacity: 0;
+            background-color: $bgc3;
+            padding: 20px 80px;
             visibility: hidden;
             transition: opacity .3s ease, visibility .3s ease;
             &.active {
@@ -523,9 +531,14 @@ main {
          font-size: $fs-xlg;
         }
         }
+    .header__logo {
+        position: fixed;
+    }
 
     .header__signin {
-        margin-left: 1.5rem;
+        margin-left: 90rem;
+        position: fixed;
+        z-index: 999;
     }
 
 // ====help
@@ -592,6 +605,7 @@ main {
     }
     .job__cards {
         margin-left: -5%;
+        padding-bottom: 50px;
     }
     .job__items-button {
         margin-left: 300px;
@@ -599,6 +613,9 @@ main {
 }
 
 @media (max-width: 576px) {
+    .header__signin {
+        margin-left: 30rem;
+    }
     .job__list {
         flex-direction: column;
         width: 100%;
